@@ -16,25 +16,31 @@ href="css/style.css">
 
 <h1>CareerPilot</h1>
 
-<h2>Student Profile</h2>
+<h2>Edit Profile</h2>
 
-<p><strong>Name:</strong> <span id="name"></span></p>
+<label>Name</label>
+<input type="text" id="full_name">
 
-<p><strong>Email:</strong> <span id="email"></span></p>
+<label>Skills</label>
+<input type="text" id="skills">
 
-<p><strong>Skills:</strong> <span id="skills"></span></p>
+<label>Experience</label>
+<input type="number" id="experience">
 
-<p><strong>Experience:</strong> <span id="experience"></span></p>
+<label>CGPA</label>
+<input type="number" step="0.01" id="cgpa">
 
-<p><strong>CGPA:</strong> <span id="cgpa"></span></p>
+<label>Department</label>
+<input type="text" id="department">
 
-<p><strong>Department:</strong> <span id="department"></span></p>
+<label>Phone</label>
+<input type="text" id="phone">
 
-<p><strong>Phone:</strong> <span id="phone"></span></p>
+<br><br>
 
-<br>
-
-<button onclick="loadProfile()">Refresh Profile</button>
+<button onclick="saveProfile()">
+Save Changes
+</button>
 
 </div>
 

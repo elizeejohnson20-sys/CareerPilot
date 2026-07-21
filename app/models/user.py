@@ -19,3 +19,12 @@ class UserProfile(BaseModel):
     cgpa: float
     department: str
     phone: str
+
+class UserUpdate(BaseModel):
+    full_name: str
+    skills: str
+    experience: int
+    cgpa: float
+    department: str
+    phone: str
+    email: str
