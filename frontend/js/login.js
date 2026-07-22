@@ -29,7 +29,8 @@ loginForm.addEventListener("submit", async function(event){
     alert(result.message);
 
     if(result.message==="Login Successful"){
-
+        
+        localStorage.setItem("email", loginData.email);
         window.location.href="dashboard.html";
 
     }

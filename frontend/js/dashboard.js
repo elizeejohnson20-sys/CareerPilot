@@ -1,4 +1,4 @@
-const email = "elizabeth20@gmail.com";
+const email = localStorage.getItem("email");
 
 async function loadProfile() {
 
@@ -9,6 +9,7 @@ async function loadProfile() {
     const user = await response.json();
 
     document.getElementById("full_name").value = user.full_name;
+    document.getElementById("email").value = user.email;
     document.getElementById("skills").value = user.skills;
     document.getElementById("experience").value = user.experience;
     document.getElementById("cgpa").value = user.cgpa;

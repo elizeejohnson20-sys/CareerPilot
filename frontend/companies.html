@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Companies</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <h2>CareerPilot</h2>
+
+    <div class="menu">
+
+        <a href="dashboard.html">Profile</a>
+
+        <a href="companies.html">Companies</a>
+
+        <a href="applications.html">Applications</a>
+
+        <a href="#">Logout</a>
+
+    </div>
+
+</nav>
+
+<div class="container">
+
+ <h2>Available Companies</h2>
+
+<input
+    type="text"
+    id="searchBox"
+    placeholder="Search company..."
+    onkeyup="searchCompanies()">
+
+<br><br>
+
+<div id="companyList"></div>
+
+</div>
+
+<script src="js/company.js"></script>
+
+</body>
+
+</html>

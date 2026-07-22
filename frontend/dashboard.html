@@ -12,35 +12,59 @@ href="css/style.css">
 
 <body>
 
+
+<nav class="navbar">
+
+    <h2>CareerPilot</h2>
+
+    <div class="menu">
+
+        <a href="dashboard.html">Profile</a>
+
+        <a href="companies.html">Companies</a>
+
+        <a href="applications.html">Applications</a>
+
+        <a href="#">Logout</a>
+
+    </div>
+
+</nav>
+
 <div class="container">
 
-<h1>CareerPilot</h1>
+<div class="profile-card">
 
-<h2>Edit Profile</h2>
+<h2>Student Profile</h2>
 
 <label>Name</label>
-<input type="text" id="full_name">
+<input id="full_name">
+
+<label>Email</label>
+<input id="email" readonly>
 
 <label>Skills</label>
-<input type="text" id="skills">
+<input id="skills">
 
 <label>Experience</label>
-<input type="number" id="experience">
+<input id="experience">
 
 <label>CGPA</label>
-<input type="number" step="0.01" id="cgpa">
+<input id="cgpa">
 
 <label>Department</label>
-<input type="text" id="department">
+<input id="department">
 
 <label>Phone</label>
-<input type="text" id="phone">
-
-<br><br>
+<input id="phone">
 
 <button onclick="saveProfile()">
+
 Save Changes
+
 </button>
+
+</div>
 
 </div>
 
