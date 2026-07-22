@@ -35,3 +35,21 @@ def add_company(company: Company):
     return {
         "message": "Company Added Successfully"
     }
+@router.get("/admin/companies")
+def get_companies():
+
+    connection = get_connection()
+    cursor = connection.cursor(dictionary=True)
+
+    cursor.execute("""
+        SELECT *
+        FROM companies
+        ORDER BY company_name
+    """)
+
+    companies = cursor.fetchall()
+
+    cursor.close()
+    connection.close()
+
+    return companies
