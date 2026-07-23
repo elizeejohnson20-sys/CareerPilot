@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Manage Companies</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <h2>CareerPilot Admin</h2>
+
+    <div class="menu">
+
+        <a href="admin-dashboard.html">Dashboard</a>
+
+        <a href="manage-companies.html">Companies</a>
+
+    </div>
+
+</nav>
+
+<div class="container">
+
+    <h2>Company Management</h2>
+
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Search Company..."
+        onkeyup="searchCompany()">
+
+    <br><br>
+
+    <button onclick="window.location.href='add-company.html'">
+        + Add Company
+    </button>
+
+    <br><br>
+
+    <table border="1" width="100%" id="companyTable">
+
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+                <th>Company</th>
+                <th>Location</th>
+                <th>Package</th>
+                <th>CGPA</th>
+                <th>Action</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="companyBody">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<script src="js/manage-companies.js"></script>
+
+</body>
+
+</html>
