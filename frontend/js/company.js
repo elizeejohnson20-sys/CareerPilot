@@ -1,20 +1,38 @@
 let companies = [];
+let appliedCompanies = [];
 
 async function loadCompanies() {
 
-    const response = await fetch("http://127.0.0.1:8000/companies");
+    const email = localStorage.getItem("email");
 
-    companies = await response.json();
+    const companyResponse = await fetch(
+        "http://127.0.0.1:8000/companies"
+    );
 
-    displayCompanies(companies);
+    companies = await companyResponse.json();
+
+    const applicationResponse = await fetch(
+        `http://127.0.0.1:8000/applications/${email}`
+    );
+
+    const applications = await applicationResponse.json();
+
+   appliedCompanies = applications.map(
+    application => Number(application.company_id)
+);
+
+
+displayCompanies(companies);
 
 }
+
 
 function displayCompanies(companyList) {
 
     let output = "";
 
     companyList.forEach(company => {
+    
 
         output += `
 
@@ -33,10 +51,22 @@ function displayCompanies(companyList) {
             <p><strong>Package:</strong> ${company.package_lpa} LPA</p>
 
             <p><strong>Eligibility:</strong> ${company.eligibility_cgpa} CGPA</p>
+${
+    appliedCompanies.includes(company.company_id)
 
-           <button onclick="viewCompany(${company.company_id})">
-              View Details
-           </button>
+    ?
+
+    `<button disabled
+        style="background:green;color:white;">
+        ✔ Applied
+     </button>`
+
+    :
+
+    `<button onclick="viewCompany(${company.company_id})">
+        View Details
+     </button>`
+}
 
         </div>
 

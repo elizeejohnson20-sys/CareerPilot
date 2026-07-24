@@ -65,18 +65,19 @@ def my_applications(email: str):
     cursor = connection.cursor(dictionary=True)
 
     query = """
-    SELECT
-        c.company_name,
-        c.location,
-        c.package_lpa,
-        a.status,
-        a.applied_date
-    FROM applications a
-    JOIN companies c
-        ON a.company_id = c.company_id
-    WHERE a.student_email=%s
-    ORDER BY a.applied_date DESC
-    """
+SELECT
+    c.company_id,
+    c.company_name,
+    c.location,
+    c.package_lpa,
+    a.status,
+    a.applied_date
+FROM applications a
+JOIN companies c
+    ON a.company_id = c.company_id
+WHERE a.student_email=%s
+ORDER BY a.applied_date DESC
+"""
 
     cursor.execute(query, (email,))
 
