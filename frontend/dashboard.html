@@ -3,15 +3,13 @@
 
 <head>
 
-<title>Dashboard</title>
+    <title>Student Dashboard</title>
 
-<link rel="stylesheet"
-href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
-
 
 <nav class="navbar">
 
@@ -20,11 +18,8 @@ href="css/style.css">
     <div class="menu">
 
         <a href="dashboard.html">Profile</a>
-
         <a href="companies.html">Companies</a>
-
         <a href="applications.html">Applications</a>
-
         <a href="#" onclick="logout()">Logout</a>
 
     </div>
@@ -33,38 +28,58 @@ href="css/style.css">
 
 <div class="container">
 
-<div class="profile-card">
+    <h1>Student Dashboard</h1>
 
-<h2>Student Profile</h2>
+    <div class="profile-card">
 
-<label>Name</label>
-<input id="full_name">
+        <h2>My Profile</h2>
 
-<label>Email</label>
-<input id="email" readonly>
+        <label>Name</label>
+        <input id="full_name">
 
-<label>Skills</label>
-<input id="skills">
+        <label>Email</label>
+        <input id="email" readonly>
 
-<label>Experience</label>
-<input id="experience">
+        <label>Skills</label>
+        <input id="skills">
 
-<label>CGPA</label>
-<input id="cgpa">
+        <label>Experience</label>
+        <input id="experience">
 
-<label>Department</label>
-<input id="department">
+        <label>CGPA</label>
+        <input id="cgpa">
 
-<label>Phone</label>
-<input id="phone">
+        <label>Department</label>
+        <input id="department">
 
-<button onclick="saveProfile()">
+        <label>Phone</label>
+        <input id="phone">
 
-Save Changes
+        <br><br>
 
+        <button onclick="saveProfile()">
+    Save Changes
 </button>
 
-</div>
+<br><br>
+
+<h3>Upload Resume (PDF)</h3>
+
+<input type="file" id="resume">
+
+<br><br>
+
+<button onclick="uploadResume()">
+    Upload Resume
+</button>
+
+<br><br>
+
+<button onclick="viewResume()">
+    View Resume
+</button>
+
+    </div>
 
 </div>
 

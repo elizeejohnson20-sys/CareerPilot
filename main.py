@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+import os
 
 from app.database.database import get_connection
 from app.routes import user, login, profile, company, application, admin, dashboard, admin_company
@@ -23,6 +25,13 @@ app.include_router(application.router)
 app.include_router(admin.router)
 app.include_router(dashboard.router)
 app.include_router(admin_company.router)
+os.makedirs("uploads", exist_ok=True)
+
+app.mount(
+    "/uploads",
+    StaticFiles(directory="uploads"),
+    name="uploads"
+)
 
 
 @app.get("/")

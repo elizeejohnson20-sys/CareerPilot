@@ -20,6 +20,12 @@ function displayCompanies(companyList) {
 
         <div class="company-card">
 
+            <img
+                src="images/${company.logo}"
+                class="company-logo"
+                alt="${company.company_name}"
+            >
+
             <h3>${company.company_name}</h3>
 
             <p><strong>Location:</strong> ${company.location}</p>
@@ -28,9 +34,9 @@ function displayCompanies(companyList) {
 
             <p><strong>Eligibility:</strong> ${company.eligibility_cgpa} CGPA</p>
 
-            <button onclick="applyCompany(${company.company_id})">
-                Apply Now
-            </button>
+           <button onclick="viewCompany(${company.company_id})">
+              View Details
+           </button>
 
         </div>
 
@@ -85,3 +91,55 @@ async function applyCompany(companyId) {
 }
 
 loadCompanies();
+
+function viewCompany(companyId){
+
+    const company = companies.find(c => c.company_id === companyId);
+
+    document.getElementById("modalLogo").src =
+        "images/" + company.logo;
+
+    document.getElementById("modalName").innerText =
+        company.company_name;
+
+    document.getElementById("modalLocation").innerText =
+        "Location : " + company.location;
+
+    document.getElementById("modalPackage").innerText =
+        "Package : " + company.package_lpa + " LPA";
+
+    document.getElementById("modalCgpa").innerText =
+        "Eligibility : " + company.eligibility_cgpa + " CGPA";
+
+ document.getElementById("applyButton").onclick = async function(){
+
+    await applyCompany(companyId);
+
+    closeModal();
+
+    loadCompanies();
+
+};
+
+    document.getElementById("companyModal").style.display = "block";
+
+}
+
+function closeModal(){
+
+    document.getElementById("companyModal").style.display = "none";
+
+}
+
+window.onclick = function(event){
+
+    const modal = document.getElementById("companyModal");
+
+    if(event.target == modal){
+
+        modal.style.display = "none";
+
+    }
+
+}
+

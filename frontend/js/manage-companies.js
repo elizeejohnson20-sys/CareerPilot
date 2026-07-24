@@ -23,7 +23,19 @@ function displayCompanies(companyList) {
         <tr>
 
             <td>${company.company_id}</td>
-            <td>${company.company_name}</td>
+            <td>
+
+    <img
+        src="images/${company.logo}"
+        class="table-logo"
+        alt="${company.company_name}"
+    >
+
+    <br>
+
+    ${company.company_name}
+
+</td>
             <td>${company.location}</td>
             <td>${company.package_lpa}</td>
             <td>${company.eligibility_cgpa}</td>

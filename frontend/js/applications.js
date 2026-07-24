@@ -22,7 +22,12 @@ async function loadApplications() {
 
             <p><strong>Package:</strong> ${application.package_lpa} LPA</p>
 
-            <p><strong>Status:</strong> ${application.status}</p>
+            <p>
+            <strong>Status:</strong>
+            <span class="status ${application.status.toLowerCase()}">
+                ${application.status}
+            </span>
+            </p>
 
             <p><strong>Applied On:</strong> ${application.applied_date}</p>
 

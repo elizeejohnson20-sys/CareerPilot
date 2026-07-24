@@ -14,6 +14,15 @@ async function loadDashboard() {
 
     document.getElementById("applications").innerText =
         data.total_applications;
+
+}
+
+function logout(){
+
+    localStorage.clear();
+
+    window.location.href="index.html";
+
 }
 
 loadDashboard();
