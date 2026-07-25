@@ -588,3 +588,43 @@ body{
     background:#1d4ed8;
 
 }
+.status-badge{
+
+    padding:6px 14px;
+    border-radius:20px;
+    color:white;
+    font-weight:bold;
+    font-size:14px;
+    display:inline-block;
+
+}
+
+.applied{
+
+    background:#f39c12;
+
+}
+
+.shortlisted{
+
+    background:#3498db;
+
+}
+
+.interview{
+
+    background:#9b59b6;
+
+}
+
+.selected{
+
+    background:#27ae60;
+
+}
+
+.rejected{
+
+    background:#e74c3c;
+
+}

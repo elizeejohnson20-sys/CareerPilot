@@ -70,6 +70,7 @@ SELECT
     c.company_name,
     c.location,
     c.package_lpa,
+    c.logo,
     a.status,
     a.applied_date
 FROM applications a

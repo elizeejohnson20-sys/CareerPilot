@@ -16,6 +16,11 @@ async function loadApplications() {
 
         <div class="company-card">
 
+            <img
+               src="images/${application.logo}"
+               class="company-logo"
+            >
+
             <h3>${application.company_name}</h3>
 
             <p><strong>Location:</strong> ${application.location}</p>
@@ -24,12 +29,22 @@ async function loadApplications() {
 
             <p>
             <strong>Status:</strong>
-            <span class="status ${application.status.toLowerCase()}">
+            <span class="status-badge ${application.status.toLowerCase()}">
                 ${application.status}
             </span>
             </p>
 
-            <p><strong>Applied On:</strong> ${application.applied_date}</p>
+           <p>
+<strong>Applied On:</strong>
+${new Date(application.applied_date).toLocaleDateString(
+    "en-IN",
+    {
+        day: "numeric",
+        month: "short",
+        year: "numeric"
+    }
+)}
+</p>
 
         </div>
 
