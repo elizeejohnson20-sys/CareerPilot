@@ -1,9 +1,3 @@
-window.onload = function () {
-
-    loadStudents();
-
-};
-
 async function loadStudents() {
 
     const response = await fetch(
@@ -20,13 +14,15 @@ async function loadStudents() {
 
         <tr>
 
-            <td>${student.user_id}</td>
             <td>${student.full_name}</td>
+
             <td>${student.email}</td>
-            <td>${student.skills}</td>
-            <td>${student.experience}</td>
+
+            <td>${student.department}</td>
+
             <td>${student.cgpa}</td>
-            <td>${student.department || ""}</td>
+
+            <td>${student.skills}</td>
 
         </tr>
 
@@ -37,3 +33,5 @@ async function loadStudents() {
     document.getElementById("studentTable").innerHTML = output;
 
 }
+
+loadStudents();

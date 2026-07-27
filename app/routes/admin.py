@@ -113,7 +113,7 @@ def get_students():
 
     query = """
     SELECT
-        id,
+        user_id,
         full_name,
         email,
         skills,
@@ -121,7 +121,7 @@ def get_students():
         cgpa,
         department
     FROM users
-    ORDER BY id
+    ORDER BY user_id
     """
 
     cursor.execute(query)

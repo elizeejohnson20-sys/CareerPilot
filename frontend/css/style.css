@@ -181,29 +181,70 @@ a:hover {
 }
 .company-card{
 
-    background:white;
+    background:#ffffff;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.12);
 
-    margin-top:20px;
+    padding:25px;
+    margin:25px 0;
 
-    padding:20px;
+    text-align:center;
 
-    border-radius:12px;
+    transition:.3s;
 
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.company-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.company-logo{
+
+    width:90px;
+    height:90px;
+
+    object-fit:contain;
+
+    display:block;
+    margin:0 auto 15px;
 
 }
 
 .company-card h3{
 
     color:#2563eb;
-
-    margin-bottom:10px;
+    margin-bottom:15px;
 
 }
 
 .company-card p{
 
-    margin:8px 0;
+    margin:10px 0;
+
+}
+
+.company-card button{
+
+    width:180px;
+    margin-top:15px;
+
+    padding:12px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#2563eb;
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.company-card button:hover{
+
+    background:#1d4ed8;
 
 }
 .profile-card{
@@ -539,10 +580,12 @@ body{
 .modal-content{
 
     width:400px;
+    max-height:80vh;
+    overflow-y:auto;
 
     background:white;
 
-    margin:8% auto;
+    margin:5% auto;
 
     padding:25px;
 
@@ -550,24 +593,80 @@ body{
 
     text-align:center;
 
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+
+    animation:popup .3s ease;
+
+}
+
+@keyframes popup{
+
+    from{
+        transform:scale(.8);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+.modal-content h2{
+
+    color:#2563eb;
+    margin:15px 0;
+
+}
+
+.modal-content p{
+
+    margin:10px 0;
+    text-align:left;
+
+}
+
+.modal-content img{
+
+    width:90px;
+    height:90px;
+
+    object-fit:contain;
+
+    display:block;
+
+    margin:0 auto 20px;
+
 }
 
 .close{
 
     float:right;
 
-    font-size:28px;
+    font-size:32px;
+
+    font-weight:bold;
 
     cursor:pointer;
 
+    color:#888;
+
 }
+
+.close:hover{
+
+    color:red;
+
+}
+
 .modal button{
 
     width:100%;
 
-    margin-top:15px;
+    margin-top:20px;
 
-    padding:12px;
+    padding:14px;
 
     background:#2563eb;
 
@@ -577,9 +676,9 @@ body{
 
     border-radius:8px;
 
-    cursor:pointer;
-
     font-size:16px;
+
+    cursor:pointer;
 
 }
 
@@ -626,5 +725,77 @@ body{
 .rejected{
 
     background:#e74c3c;
+
+}
+.filter-bar{
+
+    display:flex;
+    gap:15px;
+    margin-bottom:30px;
+    flex-wrap:wrap;
+
+}
+
+.filter-bar input{
+
+    flex:1;
+    min-width:220px;
+
+}
+
+#companyList{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+
+}
+.job-section{
+
+    margin:20px 0;
+
+}
+
+.job-section h3{
+
+    color:#2563eb;
+
+    margin-bottom:10px;
+
+    text-align:left;
+
+}
+
+.job-section p{
+
+    text-align:left;
+
+    margin:8px 0;
+
+    line-height:1.6;
+
+}
+
+hr{
+
+    border:none;
+
+    border-top:1px solid #ddd;
+
+    margin:20px 0;
+
+}
+#eligibilityMessage{
+
+    margin-top:20px;
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+
+}
+
+.modal-content strong{
+
+    color:#1e3a8a;
 
 }

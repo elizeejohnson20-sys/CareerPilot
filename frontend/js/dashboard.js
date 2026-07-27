@@ -20,8 +20,29 @@ async function loadProfile() {
         document.getElementById("skills").value = user.skills || "";
         document.getElementById("experience").value = user.experience || 0;
         document.getElementById("cgpa").value = user.cgpa || 0;
+        localStorage.setItem("cgpa", user.cgpa);
         document.getElementById("department").value = user.department || "";
         document.getElementById("phone").value = user.phone || "";
+
+
+        const applicationResponse = await fetch(
+    `http://127.0.0.1:8000/applications/${email}`
+);
+
+const applications = await applicationResponse.json();
+
+document.getElementById("totalApplications").innerText =
+    applications.length;
+
+document.getElementById("totalInterviews").innerText =
+    applications.filter(
+        application => application.status === "Interview"
+    ).length;
+
+document.getElementById("totalSelected").innerText =
+    applications.filter(
+        application => application.status === "Selected"
+    ).length;
 
     }
     catch (error) {
