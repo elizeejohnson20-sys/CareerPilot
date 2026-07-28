@@ -1,9 +1,14 @@
+alert("Dashboard JS Loaded");
 const email = localStorage.getItem("email");
 
 if (!email) {
     alert("Please login first.");
     window.location.href = "login.html";
 }
+
+console.log("Before loadProfile");
+loadProfile();
+console.log("After loadProfile");
 
 async function loadProfile() {
 
@@ -45,12 +50,13 @@ document.getElementById("totalSelected").innerText =
     ).length;
 
     }
-    catch (error) {
+     catch (error) {
 
-        console.log(error);
-        alert("Failed to load profile.");
+    console.error(error);
 
-    }
+    alert(error);
+
+}
 
 }
 
