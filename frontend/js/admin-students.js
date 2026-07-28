@@ -7,7 +7,7 @@ window.onload = function () {
 async function loadStudents() {
 
     const response = await fetch(
-        "http://127.0.0.1:8000/admin/students"
+        "https://careerpilot-production-77eb.up.railway.app/admin/students"
     );
 
     const students = await response.json();

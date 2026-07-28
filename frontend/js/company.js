@@ -8,13 +8,13 @@ async function loadCompanies() {
     const email = localStorage.getItem("email");
 
     const companyResponse = await fetch(
-        "http://127.0.0.1:8000/companies"
+        "https://careerpilot-production-77eb.up.railway.app/companies"
     );
 
     companies = await companyResponse.json();
 
     const applicationResponse = await fetch(
-        `http://127.0.0.1:8000/applications/${email}`
+        `https://careerpilot-production-77eb.up.railway.app/applications/${email}`
     );
 
     const applications = await applicationResponse.json();
@@ -132,7 +132,7 @@ async function applyCompany(companyId) {
     const email = localStorage.getItem("email");
 
     const response = await fetch(
-        "http://127.0.0.1:8000/apply",
+        "https://careerpilot-production-77eb.up.railway.app/apply",
         {
             method: "POST",
             headers: {

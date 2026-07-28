@@ -6,7 +6,7 @@ async function addCompany() {
     const eligibility_cgpa = parseFloat(document.getElementById("eligibility_cgpa").value);
 
     const response = await fetch(
-        "http://127.0.0.1:8000/admin/company",
+        "https://careerpilot-production-77eb.up.railway.app/admin/company",
         {
             method: "POST",
             headers: {

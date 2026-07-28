@@ -12,7 +12,7 @@ loginForm.addEventListener("submit", async function(event){
 
     };
 
-    const response = await fetch("http://127.0.0.1:8000/login",{
+    const response = await fetch("https://careerpilot-production-77eb.up.railway.app/login",{
 
         method:"POST",
 

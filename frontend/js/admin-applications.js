@@ -9,7 +9,7 @@ window.onload = function(){
 function loadApplications(){
 
 
-fetch("http://127.0.0.1:8000/admin/applications")
+fetch("https://careerpilot-production-77eb.up.railway.app/admin/applications")
 
 
 .then(response => response.json())
@@ -99,7 +99,7 @@ function changeStatus(applicationId) {
         return;
     }
 
-    fetch(`http://127.0.0.1:8000/admin/applications/${applicationId}`, {
+    fetch(`https://careerpilot-production-77eb.up.railway.app/admin/applications/${applicationId}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"

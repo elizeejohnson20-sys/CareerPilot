@@ -19,7 +19,7 @@ window.onload = function () {
 
 function loadCompany(){
 
-    fetch(`http://127.0.0.1:8000/companies/${companyId}`)
+    fetch(`https://careerpilot-production-77eb.up.railway.app/companies/${companyId}`)
 
     .then(response => response.json())
 
@@ -76,7 +76,7 @@ function updateCompany(){
 
 
 
-    fetch(`http://127.0.0.1:8000/companies/${companyId}`,{
+    fetch(`https://careerpilot-production-77eb.up.railway.app/companies/${companyId}`,{
 
 
         method:"PUT",

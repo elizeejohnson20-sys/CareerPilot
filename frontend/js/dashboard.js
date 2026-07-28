@@ -15,7 +15,7 @@ async function loadProfile() {
     try {
 
         const response = await fetch(
-            `http://127.0.0.1:8000/profile/${email}`
+            `https://careerpilot-production-77eb.up.railway.app/profile/${email}`
         );
 
         const user = await response.json();
@@ -31,7 +31,7 @@ async function loadProfile() {
 
 
         const applicationResponse = await fetch(
-    `http://127.0.0.1:8000/applications/${email}`
+    `https://careerpilot-production-77eb.up.railway.app/applications/${email}`
 );
 
 const applications = await applicationResponse.json();
@@ -74,7 +74,7 @@ async function saveProfile() {
 
     };
 
-    const response = await fetch("http://127.0.0.1:8000/profile", {
+    const response = await fetch("https://careerpilot-production-77eb.up.railway.app/profile", {
 
         method: "PUT",
 
@@ -119,7 +119,7 @@ async function uploadResume() {
 
     const response = await fetch(
 
-        `http://127.0.0.1:8000/upload-resume?email=${email}`,
+        `https://careerpilot-production-77eb.up.railway.app/upload-resume?email=${email}`,
 
         {
 
@@ -139,7 +139,7 @@ async function uploadResume() {
 async function viewResume() {
 
     const response = await fetch(
-        `http://127.0.0.1:8000/resume/${email}`
+        `https://careerpilot-production-77eb.up.railway.app/resume/${email}`
     );
 
     const data = await response.json();
@@ -153,7 +153,7 @@ async function viewResume() {
     }
 
     window.open(
-        `http://127.0.0.1:8000/uploads/${data.resume}`,
+        `https://careerpilot-production-77eb.up.railway.app/uploads/${data.resume}`,
         "_blank"
     );
 

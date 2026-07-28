@@ -1,7 +1,7 @@
 async function loadDashboard() {
 
     const response = await fetch(
-        "http://127.0.0.1:8000/admin/dashboard"
+        "https://careerpilot-production-77eb.up.railway.app/admin/dashboard"
     );
 
     const data = await response.json();

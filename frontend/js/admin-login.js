@@ -4,7 +4,7 @@ async function adminLogin() {
     const password = document.getElementById("password").value;
 
     const response = await fetch(
-        "http://127.0.0.1:8000/admin/login",
+        "https://careerpilot-production-77eb.up.railway.app/admin/login",
         {
             method: "POST",
             headers: {

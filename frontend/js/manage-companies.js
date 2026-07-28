@@ -3,7 +3,7 @@ let companies = [];
 async function loadCompanies() {
 
     const response = await fetch(
-        "http://127.0.0.1:8000/admin/companies"
+        "https://careerpilot-production-77eb.up.railway.app/admin/companies"
     );
 
     companies = await response.json();
@@ -90,7 +90,7 @@ async function deleteCompany(companyId) {
     }
 
     const response = await fetch(
-        `http://127.0.0.1:8000/admin/company/${companyId}`,
+        `https://careerpilot-production-77eb.up.railway.app/admin/company/${companyId}`,
         {
             method: "DELETE"
         }

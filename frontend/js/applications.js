@@ -3,7 +3,7 @@ async function loadApplications() {
     const email = localStorage.getItem("email");
 
     const response = await fetch(
-        `http://127.0.0.1:8000/applications/${email}`
+        `https://careerpilot-production-77eb.up.railway.app/applications/${email}`
     );
 
     const applications = await response.json();
