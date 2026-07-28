@@ -88,7 +88,26 @@ https://careerpilot-production-77eb.up.railway.app
 
 ## Project Screenshots
 
-Screenshots of the application interface will be added here.
+### Student Login
+![Login](screenshots/login.png)
+
+### Student Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Company Opportunities
+![Companies](screenshots/companies.png)
+
+### Application Tracking
+![Applications](screenshots/applications.png)
+
+### Admin Login
+![Admin Login](screenshots/admin-login.png)
+
+### Admin Company Management
+![Admin Companies](screenshots/admin-company.png)
+
+### Admin Application Management
+![Admin Applications](screenshots/admin-applications.png)
 
 ## Running the Project Locally
 
